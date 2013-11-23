@@ -1,0 +1,30 @@
+<html ng-app="demoApp">
+<head>
+    <title>Intro to Angular Js</title>
+</head>
+<body ng-controller="SimpleCtrl">
+
+<div>
+    Filter by Name:
+    <input type="text" ng-model="filter.name"/>
+    Filtering by name: {{ filter.name }}
+    <br/>
+    <br/>
+
+    <!--<div ng-init="names=[{name:'Ben Lai', suburb:'Wantirna'},{name:'Joyce Luc', suburb:'Scoresby'}]"></div>-->
+    <li ng-repeat="person in names|filter:filter.name">{{ person.name | uppercase }} - {{ person.suburb }}</li>
+</div>
+
+    <br/>
+    Add a name:
+    <input type = "text" ng-model="person_name"/>
+    Add a Suburb:
+    <input type = "text" ng-model="person_suburb"/>
+
+    <button ng-click="addPerson()">Add Person!</button>
+
+    <!-- Js File Lib -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/Contacts.js"></script>
+</body>
+</html>
