@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <Vehicles>
-    <Car id="1010">
+    <Car year="2005">
         <Make>Subaru</Make>
         <Model>Impreza</Model>
         <Badge>Wrx STI</Badge>
         <Price>50000</Price>
         <Colour>Black</Colour>
     </Car>
-    <Car id="2010">
+    <Car year="2003">
         <Make>Mitsubishi</Make>
         <Model>Lancer</Model>
         <Badge>Evolution X</Badge>
