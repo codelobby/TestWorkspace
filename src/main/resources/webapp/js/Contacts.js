@@ -16,5 +16,5 @@ $scope.addPerson = function(){
     $scope.person_name = "";
     $scope.person_suburb = "";
 
-};
+    };
 });
