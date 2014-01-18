@@ -1,6 +1,6 @@
-var demoApp = angular.module('demoApp',[]);
+var demoApp = angular.module('demoApp',['ngTable']);
 
-demoApp.controller('SimpleCtrl',function($scope){
+demoApp.controller('ContactsCtrl',function($scope){
     $scope.names=[
     {name:'Ben Lai', suburb:'Wantirna'},
     {name:'Joyce Luc', suburb:'Scoresby'}

@@ -1,0 +1,15 @@
+<!--<div ng-init="names=[{name:'Ben Lai', suburb:'Wantirna'},{name:'Joyce Luc', suburb:'Scoresby'}]"></div>-->
+<div>
+    Filter by Name:
+    <input type="text" ng-model="filter.name"/>
+    Filtering by name: {{ filter.name }}
+    <br/>
+    <br/>
+
+    <table ng-table>
+        <tr ng-repeat="person in names|filter:filter.name">
+            <td title="'Name'">{{ person.name | uppercase }}</td>
+            <td title="'Suburb'">{{ person.suburb }}</td>
+        </tr>
+    </table>
+</div>

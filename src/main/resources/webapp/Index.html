@@ -1,30 +1,29 @@
 <html ng-app="demoApp">
-<head>
-    <title>Intro to Angular Js</title>
-</head>
-<body ng-controller="SimpleCtrl">
+    <head>
+        <title>Intro to Angular Js</title>
+        <link href="css/ng-table.css" rel="stylesheet" media="screen">
+    </head>
 
-<div>
-    Filter by Name:
-    <input type="text" ng-model="filter.name"/>
-    Filtering by name: {{ filter.name }}
-    <br/>
-    <br/>
+    <body ng-controller="ContactsCtrl">
 
-    <!--<div ng-init="names=[{name:'Ben Lai', suburb:'Wantirna'},{name:'Joyce Luc', suburb:'Scoresby'}]"></div>-->
-    <li ng-repeat="person in names|filter:filter.name">{{ person.name | uppercase }} - {{ person.suburb }}</li>
-</div>
+        Add a name:
+        <input type = "text" ng-model="person_name"/>
+        Add a Suburb:
+        <input type = "text" ng-model="person_suburb"/>
 
-    <br/>
-    Add a name:
-    <input type = "text" ng-model="person_name"/>
-    Add a Suburb:
-    <input type = "text" ng-model="person_suburb"/>
+        <button ng-click="addPerson()">Add Person!</button>
 
-    <button ng-click="addPerson()">Add Person!</button>
+        <ng-include src="'partials/Search.html'" />
 
-    <!-- Js File Lib -->
-    <script src="js/angular.min.js"></script>
-    <script src="js/Contacts.js"></script>
-</body>
+
+        <!-- Js File Lib -->
+        <script src="js/angular.min.js"></script>
+        <script src="js/ng-table.js"></script>
+
+        <!--Controllers-->
+        <script src="controllers/Contacts.js"></script>
+
+
+    </body>
+
 </html>
