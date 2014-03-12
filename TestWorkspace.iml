@@ -39,6 +39,7 @@
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.3" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.6" level="project" />
     <orderEntry type="library" name="Maven: org.json:json:20131018" level="project" />
+    <orderEntry type="library" name="Maven: com.google.collections:google-collections:1.0" level="project" />
   </component>
 </module>
 
