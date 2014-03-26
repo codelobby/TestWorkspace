@@ -1,17 +1,24 @@
 package Database;
 
+import com.googlecode.flyway.core.Flyway;
+
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class Database {
+public class DatabaseMain {
     public static void main(String[] args) {
 
         DatabaseTestDataSource databaseTestDataSource = new DatabaseTestDataSource();
         DataSource testDataSource = databaseTestDataSource.getDataSource();
-        doQuery(testDataSource);
+        //doQuery(testDataSource);
+
+        Flyway flyway = new Flyway();
+        flyway.setDataSource(testDataSource);
+        flyway.migrate();
+
     }
 
     private static void doQuery(DataSource dataSource) {
