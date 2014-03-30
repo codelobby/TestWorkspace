@@ -13,22 +13,24 @@ public class DatabaseMain {
 
         DatabaseTestDataSource databaseTestDataSource = new DatabaseTestDataSource();
         DataSource testDataSource = databaseTestDataSource.getDataSource();
-        //doQuery(testDataSource);
 
         Flyway flyway = new Flyway();
         flyway.setDataSource(testDataSource);
-        flyway.migrate();
+        if (flyway.info().current() == null) {
+            flyway.migrate();
+        }
 
+        doQuery(testDataSource);
     }
 
     private static void doQuery(DataSource dataSource) {
 
-        String query = "Select FirstName, LastName from Names Where FirstName = ?";
+        String query = "Select FirstName, LastName from Person Where FirstName = ?";
 
         try {
             Connection dbConnection = dataSource.getConnection();
             PreparedStatement preparedStatement = dbConnection.prepareStatement(query);
-            preparedStatement.setString(1, "Ben");
+            preparedStatement.setString(1, "Benjamin");
 
             ResultSet rs = preparedStatement.executeQuery();
 

@@ -1,3 +1,4 @@
 CREATE TABLE Person (
-    Name VARCHAR(100)
+    FirstName VARCHAR(100),
+    LastName VARCHAR(100)
     )
