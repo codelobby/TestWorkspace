@@ -1,9 +1,5 @@
 package JsonObjectTrial;
 
-import org.json.JSONObject;
-
-import java.lang.reflect.Array;
-
 import com.google.common.collect.Lists;
 import org.json.JSONObject;
 
