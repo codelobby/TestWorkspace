@@ -7,9 +7,9 @@ public class MainApp {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
 
-        ComponentWire obj = (ComponentWire) context.getBean("componentWire");
+        //ComponentWire obj = (ComponentWire) context.getBean("componentWire");
 
-        obj.getMessage();
+        //obj.getMessage();
 
         BeanProperty obj2 = (BeanProperty) context.getBean("helloWorld");
 

@@ -1,6 +1,7 @@
 package JsonObjectTrial;
 
 import com.google.common.collect.Lists;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -10,7 +11,24 @@ import java.util.Map;
 public class JsonTrial {
 
     public static void main(String[] args) {
-        JSONObject jsonObjectMain = new JSONObject();
+
+        List<String> strings = Lists.newArrayList();
+        strings.add("One");
+        strings.add("Two");
+        strings.add("Three");
+
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("json1", "json2");
+        JSONObject jsonObject2 = new JSONObject();
+        jsonObject2.put("json3", "json4");
+
+        JSONArray jsonArray = new JSONArray();
+        jsonArray.put(jsonObject);
+        jsonArray.put(jsonObject2);
+
+        System.out.println(jsonArray);
+
+        /*JSONObject jsonObjectMain = new JSONObject();
         System.out.println(jsonObjectMain);
         jsonObjectMain.put("main", "main");
         System.out.println(jsonObjectMain);
@@ -19,7 +37,7 @@ public class JsonTrial {
         JSONObject test = new JSONObject();
         System.out.println(test);
         test.put("main", new JSONObject());
-        System.out.println(test);
+        System.out.println(test);*/
 
     }
 

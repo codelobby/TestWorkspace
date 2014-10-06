@@ -1,13 +1,5 @@
 package Concordion;
 
-import org.concordion.integration.junit4.ConcordionRunner;
-import org.junit.runner.RunWith;
+public class HelloWorldTest extends ConcordionTestBase{
 
-@RunWith(ConcordionRunner.class)
-public class HelloWorldTest {
-
-
-    public String getGreeting() {
-        return "Hello World!";
-    }
 }

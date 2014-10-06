@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:concordion="http://www.concordion.org/2007/concordion">
-<body>
-<p concordion:assertEquals="getGreeting()">Hello World!</p>
-</body>
+    <body>
+        <table concordion:execute="#result=runTest(#fullName)">
+            <tr>
+                <th concordion:set="#fullName">Full Name</th>
+                <th concordion:assertEquals="#result.firstName">First Name</th>
+                <th concordion:assertEquals="#result.lastName">Last Name</th>
+            </tr>
+            <tr>
+                <td>Mr Who</td>
+                <td>Mr</td>
+                <td>Who</td>
+            </tr>
+        </table>
+    </body>
 </html>
