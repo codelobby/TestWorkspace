@@ -70,6 +70,13 @@
             <artifactId>selenium-java</artifactId>
             <version>2.41.0</version>
         </dependency>
+        <dependency>
+            <groupId>net.lightbody.bmp</groupId>
+            <!-- To use the legacy, Jetty-based implementation,
+                 change the artifactId to browsermob-core -->
+            <artifactId>browsermob-core-littleproxy</artifactId>
+            <version>2.1.0-beta-2</version>
+        </dependency>
 
     </dependencies>
 
